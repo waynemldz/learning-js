@@ -9,3 +9,4 @@ function nomeComIdade(nome, idade){
 }
 
 nomeComIdade("wayne", 21);
+nomeComIdade("Gabriel")
