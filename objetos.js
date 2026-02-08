@@ -36,6 +36,5 @@ let array = Object.keys(objetoA);
 array.push("teste")
 console.log(array)
 
-// copiar objeto
-
+// copiar objeto (mutação)
 let objetoC = objetoA;
