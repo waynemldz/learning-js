@@ -7,6 +7,7 @@ let pessoa = {
     }
 }
 
+pessoa.mergulhar()
 
 let carro = {
     marca: "VW",
