@@ -1,13 +1,10 @@
-class Universitario {
-    constructor(nome, idade, cor, notaEnem){
-        this.nome = nome;
-        this.cor = cor;
-        this.notaEnem = notaEnem;
+class Student{
+    constructor(name, yOld, grade){
+        this.name = name;
+        this.yOld = yOld;
+        this.grade = grade;
     }
 }
 
-Universitario.prototype.idade = 18;
-let alfredo = new Universitario('Alfredo', 18, 'branco', 650);
-Universitario.prototype.nome = 'Teste';
- console.log(alfredo.nome)
- console.log(Universitario.nome)
+let wayne = new Student('Wayne', 24, 600);
+console.log(wayne)
