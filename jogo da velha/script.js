@@ -6,33 +6,38 @@ let messageContainer = document.querySelector("#message");
 let messageText = document.querySelector("#message p");
 let secondPlayer;
 
-// Count 
+// Count
 let player1 = 0;
 let player2 = 0;
 
 // Box event click
 
-for(let i = 0; i < boxes.length; i++){
-    boxes[i].addEventListener("click", function() {
+for (let i = 0; i < boxes.length; i++) {
+  boxes[i].addEventListener("click", function () {
+    let element = checkElement(player1, player2);
 
-        let element;
+    if (this.childNodes.length == 0) {
+      let cloneElement = element.cloneNode(true);
 
-        if(player1 == player2){
-            element = x;
-        }else{
-            element = o;
-        }
+      this.appendChild(cloneElement);
 
-        let cloneElement = element.cloneNode(true);
+      // computar jogada
 
-        this.appendChild(cloneElement);
+      if (player1 == player2) {
+        player1++;
+      } else {
+        player2++;
+      }
+    }
+  });
+}
 
-        // computar jogada
+function checkElement(player1, player2) {
+  if (player1 == player2) {
+    element = x;
+  } else {
+    element = o;
+  }
 
-        if(player1 == player2){
-            player1++
-        }else{
-            player2++
-        }
-    })
+  return element;
 }
