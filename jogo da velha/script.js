@@ -188,6 +188,20 @@ function checkCondition() {
     }
   }
 
+  // evento para saber se é 2 players ou IA
+
+  for(let i = 0; i < buttons.length; i++){
+    buttons[i].addEventListener("click", function(){
+
+      alert('clicou')
+      // secondPlayer = this.getAttribute("id");
+
+      // for(let j = 0; j < buttons.length; j++){
+      //   buttons[j].style.display = 'none';
+      // }
+    })
+  }
+
   // Deu velha
 
   let counter = 0;
